@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Recruiters - Non-IT Jobs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Quantum Recruiters</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="it-jobs.html">IT Jobs</a></li>
+                <li><a href="non-it-jobs.html">Non-IT Jobs</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Non-IT Job Listings Section -->
+    <section id="job-listings">
+        <div class="container">
+            <h2>Non-IT Jobs</h2>
+            <div class="job">
+                <h4>HR Manager</h4>
+                <p>Location: New York</p>
+                <p>Experience: 5+ years</p>
+                <button onclick="openForm()">Apply Now</button>
+            </div>
+            <div class="job">
+                <h4>Digital Marketing</h4>
+                <p>Location: Pune</p>
+                <p>Experience: 5+ years</p>
+                <button onclick="openForm()">Apply Now</button>
+            </div>
+            <div class="job">
+                <h4>Business Analyst</h4>
+                <p>Location: Bangalore</p>
+                <p>Experience: 5+ years</p>
+                <button onclick="openForm()">Apply Now</button>
+            </div>
+            <div class="job">
+                <h4>Market Research Analyst</h4>
+                <p>Location: Delhi</p>
+                <p>Experience: 5+ years</p>
+                <button onclick="openForm()">Apply Now</button>
+            </div>
+            <!-- More Non-IT Jobs can be added here -->
+        </div>
+    </section>
+
+    <!-- Application Form Modal -->
+     
+    <div id="applyFormModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeForm()">&times;</span>
+            <h2>Apply for the Job</h2>
+            <form id="applicationForm">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="number">Mobile Number:</label>
+                <input type="number" id="number" name="number" required>
+
+
+                <label for="ctc">Current CTC:</label>
+                <input type="text" id="ctc" name="ctc" required>
+
+                <label for="experience">Total Experience (in years):</label>
+                <input type="text" id="experience" name="experience" required>
+
+                <label for="ctc">Expected CTC:</label>
+                <input type="text" id="ctc" name="ctc" required>
+
+                <label for="notice-period">Notice Period:</label>
+                <select id="notice-period" name="notice-period" required>
+                    <option value="" disabled selected>Select your notice period</option>
+                    <option value="Immediate">Immediate</option>
+                    <option value="15 days">15 days</option>
+                    <option value="30 days">30 days</option>
+                    <option value="60 days">60 days</option>
+                    <option value="90 days">90 days</option>
+                    <option value="Serving Notice">Serving Notice Period</option>
+                </select>
+
+                <label>Do you have any current offers?</label>
+            <div>
+                <input type="radio" id="offers-yes" name="offers" value="Yes" onclick="toggleLastServingDate(true)" required>
+                <label for="offers-yes">Yes</label>
+            </div>
+            <div>
+                <input type="radio" id="offers-no" name="offers" value="No" onclick="toggleLastServingDate(false)" required>
+                <label for="offers-no">No</label>
+            </div>
+
+            <!-- Last Serving Date Input (Initially Hidden) -->
+            <div id="lastServingDateContainer" style="display: none;">
+                <label for="last-serving-date">What is the last serving date of your notice period?</label>
+                <input type="date" id="last-serving-date" name="last-serving-date">
+            </div>
+
+                <label for="location">Current Location:</label>
+                <input type="text" id="location" name="location" required>
+
+                <label for="cv">Upload Your CV:</label>
+                <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Quantum Recruiters. All rights reserved.</p>
+            <p>Contact us: <a href="recruitermohit22@gmail.com">recruitermohit22@gmail.com</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
